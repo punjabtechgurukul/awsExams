@@ -1,162 +1,231 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="theme-color" content="#17365d">
-<title>AWS CLF-C02 iPad Mock Exam</title>
+<title>AWS CLF-C02 Mock Tests</title>
 <style>
-:root{--navy:#17365d;--bg:#f3f5f7;--card:#fff;--border:#d7dce2;--green:#177245;--greenbg:#eaf7ef;--red:#a62828;--redbg:#fdeeee;--text:#18212b;--muted:#65717e}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html{font-size:16px}
-body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;line-height:1.5}
-header{position:sticky;top:0;z-index:100;background:var(--navy);color:#fff;padding:calc(12px + env(safe-area-inset-top)) 16px 12px}
-.header-row{max-width:900px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:10px}
-.title{font-weight:700;font-size:17px}
-.stats{font-size:14px;white-space:nowrap}
-main{max-width:900px;margin:0 auto;padding:18px 14px calc(40px + env(safe-area-inset-bottom))}
-.info{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:17px;margin-bottom:16px}
-.info h2{font-size:18px;margin:0 0 8px}
-.info p{margin:6px 0;color:var(--muted)}
-.progress-bg{height:8px;background:#dfe4e9;border-radius:99px;margin-top:12px;overflow:hidden}
-.progress{height:100%;width:0;background:#4d7ba8;transition:width .2s}
-.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:17px;margin:14px 0;box-shadow:0 1px 4px rgba(0,0,0,.04)}
-.q{font-size:17px;font-weight:700;line-height:1.5;margin-bottom:14px}
-.option{display:flex;align-items:flex-start;gap:11px;width:100%;padding:15px 13px;margin:9px 0;border:2px solid var(--border);border-radius:12px;background:#fff;font-size:16px;text-align:left;cursor:pointer;touch-action:manipulation}
-.option:active{transform:scale(.995)}
-.option input{width:22px;height:22px;min-width:22px;margin:0;accent-color:var(--navy)}
-.option.correct{background:var(--greenbg);border-color:var(--green)}
-.option.wrong{background:var(--redbg);border-color:var(--red)}
-.option.disabled{cursor:default}
-.feedback{display:none;margin-top:14px;padding:15px;border-radius:12px;font-size:15px}
-.feedback.show{display:block}
-.feedback.correct{background:var(--greenbg);border-left:5px solid var(--green)}
-.feedback.wrong{background:var(--redbg);border-left:5px solid var(--red)}
-.feedback-title{font-weight:800;font-size:17px}
-.explain{margin-top:8px}
-.review{margin-top:14px;border-top:1px solid var(--border);padding-top:12px}
-.review-title{font-weight:800;margin-bottom:8px}
-.choice{padding:11px 12px;margin:7px 0;border-radius:9px;background:#f6f7f8;font-size:14px}
-.choice.correct{background:var(--greenbg);border-left:4px solid var(--green)}
-.choice.wrong{border-left:4px solid #aab1b8}
-.domain{font-size:12px;color:var(--muted);margin-top:11px}
-.final{display:none;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin:20px 0;text-align:center}
-button{font:inherit}
-.reset{background:var(--navy);color:white;border:0;border-radius:10px;padding:12px 20px;font-weight:700}
-@media (min-width:700px){main{padding-left:22px;padding-right:22px}.q{font-size:18px}}
-@media (prefers-color-scheme:dark){
- body{background:#10151b;color:#edf2f7}
- .info,.card,.final{background:#171d24;border-color:#303944}
- .option{background:#171d24;border-color:#39434f;color:#edf2f7}
- .option.correct{background:#10281b} .option.wrong{background:#2b1718}
- .choice{background:#20262e} .choice.correct{background:#10281b}
- .feedback.correct{background:#10281b} .feedback.wrong{background:#2b1718}
- .info p,.domain{color:#aeb8c4}
+:root { --bg:#f5f7fb; --card:#fff; --text:#172033; --muted:#667085; --border:#dfe4ec; --accent:#1769e0; --good:#16803c; --bad:#c62828; }
+* { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif; background:var(--bg); color:var(--text); }
+button { font:inherit; }
+.app { max-width:900px; margin:0 auto; padding:24px 18px 48px; }
+header { text-align:center; padding:18px 0 24px; }
+h1 { margin:0 0 8px; font-size:30px; }
+.subtitle { color:var(--muted); font-size:16px; }
+.card { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:20px; box-shadow:0 3px 12px rgba(0,0,0,.04); }
+.grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+.test-btn { min-height:92px; border:1px solid var(--border); background:#fff; border-radius:16px; padding:16px; text-align:left; cursor:pointer; }
+.test-btn:active { transform:scale(.99); }
+.test-title { font-weight:700; font-size:18px; margin-bottom:5px; }
+.test-meta { color:var(--muted); font-size:14px; }
+.hidden { display:none !important; }
+.topbar { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap; }
+.back, .navbtn { border:1px solid var(--border); background:#fff; padding:10px 14px; border-radius:12px; cursor:pointer; }
+.progress-wrap { flex:1; min-width:180px; }
+.progress-text { text-align:center; font-size:14px; color:var(--muted); margin-bottom:7px; }
+.progress { height:8px; background:#e8edf5; border-radius:99px; overflow:hidden; }
+.progress > div { height:100%; background:var(--accent); width:0; }
+.question-card h2 { font-size:21px; line-height:1.4; margin:0 0 20px; }
+.option { width:100%; text-align:left; background:#fff; border:2px solid var(--border); border-radius:14px; padding:15px; margin:9px 0; cursor:pointer; display:flex; gap:12px; align-items:flex-start; }
+.option .letter { font-weight:800; min-width:28px; }
+.option.selected { border-color:var(--accent); background:#f0f6ff; }
+.option.correct { border-color:var(--good); background:#eefaf2; }
+.option.wrong { border-color:var(--bad); background:#fff0f0; }
+.option:disabled { cursor:default; opacity:1; }
+.feedback { margin-top:16px; padding:15px; border-radius:13px; line-height:1.5; }
+.feedback.good { background:#eefaf2; color:#145c2f; }
+.feedback.bad { background:#fff0f0; color:#8c1d1d; }
+.actions { display:flex; justify-content:space-between; gap:12px; margin-top:20px; }
+.primary { background:var(--accent); color:#fff; border:0; border-radius:13px; padding:13px 20px; cursor:pointer; font-weight:700; }
+.primary:disabled { opacity:.45; cursor:default; }
+.secondary { background:#fff; color:var(--text); border:1px solid var(--border); border-radius:13px; padding:13px 20px; cursor:pointer; }
+.result { text-align:center; }
+.score { font-size:52px; font-weight:800; margin:10px 0; }
+.result-note { color:var(--muted); margin-bottom:20px; }
+.review { text-align:left; margin-top:20px; }
+.review-item { border-top:1px solid var(--border); padding:15px 0; }
+@media (max-width:600px) {
+  .app { padding:14px 12px 35px; }
+  h1 { font-size:26px; }
+  .grid { grid-template-columns:1fr; }
+  .question-card h2 { font-size:19px; }
+  .actions { position:sticky; bottom:0; background:rgba(245,247,251,.96); padding:10px 0; }
 }
 </style>
 </head>
 <body>
-<header>
-<div class="header-row">
-<div class="title">AWS CLF-C02 Mock Exam</div>
-<div class="stats">Score: <b id="score">0</b> &nbsp;•&nbsp; <b id="answered">0</b>/<b id="total">0</b></div>
+<div class="app">
+  <section id="home">
+    <header>
+      <h1>AWS Cloud Practitioner</h1>
+      <div class="subtitle">CLF-C02 • 10 Mock Tests • 100 Questions Each</div>
+    </header>
+    <div class="card">
+      <h2>Select a Mock Test</h2>
+      <p class="subtitle">Each test contains 100 exam-level questions. Select an answer to get immediate feedback.</p>
+      <div id="testGrid" class="grid"></div>
+    </div>
+  </section>
+
+  <section id="exam" class="hidden">
+    <div class="topbar">
+      <button class="back" id="backBtn">← Tests</button>
+      <div class="progress-wrap">
+        <div class="progress-text" id="progressText"></div>
+        <div class="progress"><div id="progressBar"></div></div>
+      </div>
+    </div>
+    <div class="card question-card">
+      <h2 id="questionText"></h2>
+      <div id="options"></div>
+      <div id="feedback" class="hidden"></div>
+      <div class="actions">
+        <button class="secondary" id="prevBtn">Previous</button>
+        <button class="primary" id="nextBtn" disabled>Next</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="result" class="hidden">
+    <header>
+      <h1 id="resultTitle">Mock Test Complete</h1>
+    </header>
+    <div class="card result">
+      <div class="score" id="score"></div>
+      <div class="result-note" id="resultNote"></div>
+      <button class="primary" id="retryBtn">Retake Test</button>
+      <button class="secondary" id="homeBtn" style="margin-left:8px;">Choose Another Test</button>
+      <div id="review" class="review"></div>
+    </div>
+  </section>
 </div>
-</header>
-<main>
-<section class="info">
-<h2>iPad Instant Feedback Mode</h2>
-<p>Tap an answer. The result appears immediately, including the correct answer, explanation, and a quick description of every option.</p>
-<p><b>Once answered, a question is locked.</b> Your score updates automatically.</p>
-<div class="progress-bg"><div class="progress" id="progress"></div></div>
-</section>
-<section class="panel">
-<h2>Question Bank</h2>
-<p>To add or change questions, edit <b>questions.json</b> in this folder. The app automatically uses however many questions are in that file.</p>
-<p>See <b>README.md</b> for the exact format.</p>
-</section>
-<div id="questions"></div>
-<section class="final" id="final"></section>
-</main>
+
 <script>
-let questions=[];
-let state=JSON.parse(localStorage.getItem("aws-clf-c02-pwa-v2")||'{"answers":{},"score":0}');
-let appReady=false;
-;
-document.getElementById("total").textContent=total;
-function esc(s){return s.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));}
-function render(){
- const root=document.getElementById("questions");root.innerHTML="";
- questions.forEach((item,i)=>{
-  const card=document.createElement("section");card.className="card";card.id="card-"+i;
-  const q=document.createElement("div");q.className="q";q.textContent="Question "+(i+1)+": "+item.q;card.appendChild(q);
-  item.o.forEach((opt,j)=>{
-   const label=document.createElement("label");label.className="option";label.id="opt-"+i+"-"+j;
-   const input=document.createElement("input");input.type="radio";input.name="q"+i;input.value=j;
-   input.addEventListener("change",()=>answer(i,j));
-   const span=document.createElement("span");span.innerHTML="<b>"+String.fromCharCode(65+j)+".</b> "+esc(opt);
-   label.appendChild(input);label.appendChild(span);card.appendChild(label);
-  });
-  const fb=document.createElement("div");fb.className="feedback";fb.id="fb-"+i;card.appendChild(fb);
-  const domain=document.createElement("div");domain.className="domain";domain.textContent="Domain: "+item.domain;card.appendChild(domain);
-  root.appendChild(card);
- });
+const tests = Array.from({length:10}, (_,i) => ({
+  no:i+1, file:`tests/test-${i+1}.json`
+}));
+
+let currentTest = null;
+let questions = [];
+let index = 0;
+let answers = {};
+let score = 0;
+
+const $ = id => document.getElementById(id);
+
+function show(section) {
+  ["home","exam","result"].forEach(id => $(id).classList.toggle("hidden", id !== section));
+  window.scrollTo(0,0);
 }
-function answer(i,j){
- const item=questions[i],card=document.getElementById("card-"+i);
- if(card.dataset.done==="1")return;
- card.dataset.done="1";answered++;
- card.querySelectorAll(".option").forEach((el,k)=>{
-  el.querySelector("input").disabled=true;el.classList.add("disabled");
-  if(k===item.a)el.classList.add("correct");
- });
- const fb=document.getElementById("fb-"+i);
- let review='<div class="review"><div class="review-title">Option review</div>';
- item.details.forEach((d,k)=>{
-  review+='<div class="choice '+(d.correct?"correct":"wrong")+'"><b>'+d.letter+". "+esc(item.o[k])+
-  (d.correct?" — CORRECT":" — Not the best answer")+'</b><br>'+esc(d.text)+'</div>';
- });
- review+="</div>";
- if(j===item.a){
-  score++;
-  fb.className="feedback show correct";
-  fb.innerHTML='<div class="feedback-title">✓ Correct</div><div class="explain"><b>Why:</b> '+esc(item.e)+'</div>'+review;
- }else{
-  document.getElementById("opt-"+i+"-"+j).classList.add("wrong");
-  fb.className="feedback show wrong";
-  fb.innerHTML='<div class="feedback-title">✗ Incorrect</div><div class="explain"><b>Correct answer:</b> '+String.fromCharCode(65+item.a)+". "+esc(item.o[item.a])+
-  '</div><div class="explain"><b>Why:</b> '+esc(item.e)+'</div>'+review;
- }
- update();
- if(answered===total){
-  const pct=Math.round(score/total*100),f=document.getElementById("final");
-  f.style.display="block";
-  f.innerHTML="<h2>Exam Complete</h2><h1>"+score+" / "+total+" ("+pct+"%)</h1><p>All questions answered.</p><button class='reset' onclick='resetExam()'>Retake Exam</button>";
- }
+
+function renderTests() {
+  $("testGrid").innerHTML = tests.map(t => `
+    <button class="test-btn" onclick="startTest(${t.no})">
+      <div class="test-title">Mock Test ${t.no}</div>
+      <div class="test-meta">100 questions • Exam-level • Instant feedback</div>
+    </button>
+  `).join("");
 }
-function update(){
- document.getElementById("score").textContent=score;
- document.getElementById("answered").textContent=answered;
- document.getElementById("progress").style.width=(answered/total*100)+"%";
+
+async function startTest(no) {
+  const res = await fetch(`tests/test-${no}.json`);
+  questions = await res.json();
+  currentTest = no;
+  index = 0;
+  answers = {};
+  score = 0;
+  show("exam");
+  renderQuestion();
 }
-function resetExam(){
- score=0;answered=0;document.getElementById("final").style.display="none";render();update();
- window.scrollTo({top:0,behavior:"smooth"});
+
+function renderQuestion() {
+  const q = questions[index];
+  $("progressText").textContent = `Mock Test ${currentTest} • Question ${index+1} of ${questions.length}`;
+  $("progressBar").style.width = `${((index+1)/questions.length)*100}%`;
+  $("questionText").textContent = q.question;
+
+  $("options").innerHTML = q.options.map((opt,i) => {
+    const letter = "ABCD"[i];
+    const chosen = answers[index];
+    let cls = "";
+    if (chosen !== undefined) {
+      if (letter === q.correctAnswer) cls = "correct";
+      else if (letter === chosen) cls = "wrong";
+    } else if (letter === chosen) cls = "selected";
+    return `<button class="option ${cls}" ${chosen !== undefined ? "disabled":""} onclick="selectAnswer('${letter}')">
+      <span class="letter">${letter}.</span><span>${escapeHtml(opt)}</span>
+    </button>`;
+  }).join("");
+
+  if (answers[index] !== undefined) {
+    const correct = answers[index] === q.correctAnswer;
+    $("feedback").className = `feedback ${correct ? "good":"bad"}`;
+    $("feedback").innerHTML = `<strong>${correct ? "Correct" : "Incorrect"}</strong><br>
+      Correct answer: <strong>${q.correctAnswer}</strong><br>${escapeHtml(q.explanation)}`;
+    $("feedback").classList.remove("hidden");
+  } else {
+    $("feedback").classList.add("hidden");
+  }
+
+  $("prevBtn").disabled = index === 0;
+  $("nextBtn").disabled = answers[index] === undefined;
+  $("nextBtn").textContent = index === questions.length-1 ? "Finish Test" : "Next";
 }
-async function initApp(){
- try{
-   const response=await fetch("questions.json",{cache:"no-store"});
-   if(!response.ok) throw new Error("questions.json unavailable");
-   questions=await response.json();
-   document.getElementById("total").textContent=questions.length;
-   render();update();
-   if("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(()=>{});
- }catch(e){
-   document.getElementById("questions").innerHTML='<section class="panel"><h2>Question bank could not be loaded</h2><p>Make sure questions.json is next to index.html and the app is hosted over HTTPS.</p></section>';
- }
+
+function selectAnswer(letter) {
+  if (answers[index] !== undefined) return;
+  answers[index] = letter;
+  if (letter === questions[index].correctAnswer) score++;
+  renderQuestion();
 }
-initApp();
+
+function nextQuestion() {
+  if (answers[index] === undefined) return;
+  if (index < questions.length-1) {
+    index++;
+    renderQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function previousQuestion() {
+  if (index > 0) {
+    index--;
+    renderQuestion();
+  }
+}
+
+function showResult() {
+  show("result");
+  const pct = Math.round((score/questions.length)*100);
+  $("score").textContent = `${score} / ${questions.length}`;
+  $("resultNote").textContent = `${pct}% score • ${pct >= 70 ? "Good performance" : "Keep practicing"}`
+  $("review").innerHTML = questions.map((q,i) => {
+    const a = answers[i];
+    const ok = a === q.correctAnswer;
+    return `<div class="review-item">
+      <strong>Q${i+1}. ${escapeHtml(q.question)}</strong><br>
+      Your answer: <strong>${a || "Not answered"}</strong> • Correct: <strong>${q.correctAnswer}</strong>
+      <div style="color:${ok ? 'var(--good)':'var(--bad)'};margin-top:5px">${ok ? "Correct" : "Incorrect"}</div>
+    </div>`;
+  }).join("");
+}
+
+function escapeHtml(s) {
+  return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+}
+
+$("backBtn").onclick = () => show("home");
+$("prevBtn").onclick = previousQuestion;
+$("nextBtn").onclick = nextQuestion;
+$("retryBtn").onclick = () => startTest(currentTest);
+$("homeBtn").onclick = () => show("home");
+
+renderTests();
 </script>
 </body>
 </html>

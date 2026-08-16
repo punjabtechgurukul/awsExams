@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 1,
+    "question": "An analytics team needs a managed data warehouse optimized for complex analytical queries over large datasets. Which service is most appropriate?",
+    "options": [
+      "Amazon ElastiCache",
+      "Amazon Redshift",
+      "Amazon DynamoDB",
+      "Amazon RDS"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Redshift is a managed cloud data warehouse optimized for analytical workloads."
+  },
+  {
+    "id": 2,
+    "question": "An application requires a shared POSIX-compatible file system that can be mounted concurrently by multiple Linux EC2 instances. Which service is best?",
+    "options": [
+      "Amazon EBS",
+      "Amazon S3",
+      "Amazon FSx for Windows File Server",
+      "Amazon EFS"
+    ],
+    "correctAnswer": "D",
+    "explanation": "EFS provides managed elastic file storage with concurrent access from multiple Linux clients."
+  },
+  {
+    "id": 3,
+    "question": "A company wants to expose a service privately to customers in other VPCs without requiring VPC peering or internet exposure. Which AWS service is designed for this pattern?",
+    "options": [
+      "Amazon CloudFront",
+      "NAT Gateway",
+      "Internet Gateway",
+      "AWS PrivateLink"
+    ],
+    "correctAnswer": "D",
+    "explanation": "PrivateLink enables private service connectivity using interface VPC endpoints without exposing the service publicly."
+  },
+  {
+    "id": 4,
+    "question": "A company wants to run a workflow that coordinates multiple AWS services and application steps with retries and state tracking. Which service is appropriate?",
+    "options": [
+      "Amazon SQS only",
+      "AWS CloudTrail",
+      "Amazon SNS only",
+      "AWS Step Functions"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Step Functions orchestrates stateful workflows with retries, branching, and service integrations."
+  },
+  {
+    "id": 5,
+    "question": "A company operates two application environments and wants to send 90% of traffic to one and 10% to another for controlled testing. Which Route 53 routing policy is most suitable?",
+    "options": [
+      "Failover routing",
+      "Simple routing",
+      "Weighted routing",
+      "Geolocation routing"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Weighted routing distributes traffic according to configured weights and is useful for testing and gradual migrations."
+  },
+  {
+    "id": 6,
+    "question": "A company needs a relational database compatible with MySQL/PostgreSQL that can provide higher performance and availability than standard RDS engines. Which AWS service should be evaluated?",
+    "options": [
+      "Amazon DynamoDB",
+      "Amazon DocumentDB only",
+      "Amazon Neptune",
+      "Amazon Aurora"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Aurora is a managed relational database engine compatible with MySQL and PostgreSQL and designed for high performance and availability."
+  },
+  {
+    "id": 7,
+    "question": "A team wants an alert when actual AWS spending exceeds a predefined threshold. Which service is designed for this?",
+    "options": [
+      "AWS Config",
+      "AWS Trusted Advisor only",
+      "AWS Pricing Calculator",
+      "AWS Budgets"
+    ],
+    "correctAnswer": "D",
+    "explanation": "AWS Budgets can monitor cost and usage against thresholds and send notifications."
+  },
+  {
+    "id": 8,
+    "question": "A Windows workload requires a managed SMB file system integrated with Microsoft Active Directory. Which service should be considered?",
+    "options": [
+      "Amazon S3",
+      "Amazon EFS",
+      "Amazon EBS",
+      "Amazon FSx for Windows File Server"
+    ],
+    "correctAnswer": "D",
+    "explanation": "FSx for Windows File Server provides managed Windows file systems using SMB and Active Directory integration."
+  },
+  {
+    "id": 9,
+    "question": "A company must retain compliance archives for several years and rarely needs to retrieve them. Which S3 storage class is generally the most cost-effective?",
+    "options": [
+      "S3 Express One Zone",
+      "S3 Glacier Deep Archive",
+      "S3 Standard-IA",
+      "S3 Standard"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Glacier Deep Archive is designed for long-term retention with very infrequent access and low storage cost."
+  },
+  {
+    "id": 10,
+    "question": "An organization needs an audit trail of API activity across its AWS environment, including who made API calls and when. Which service should be used?",
+    "options": [
+      "AWS CloudTrail",
+      "Amazon CloudWatch",
+      "AWS Trusted Advisor",
+      "AWS Config only"
+    ],
+    "correctAnswer": "A",
+    "explanation": "CloudTrail records AWS API activity and provides information about the identity, time, source, and action."
+  },
+  {
+    "id": 11,
+    "question": "A workload has predictable compute requirements and can tolerate a commitment for one or three years. Which EC2 purchasing option can reduce costs compared with On-Demand?",
+    "options": [
+      "Spot Instances only",
+      "On-Demand Instances",
+      "Dedicated Hosts only",
+      "Savings Plans or Reserved Instances"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Savings Plans and Reserved Instances provide discounted pricing in exchange for commitment."
+  },
+  {
+    "id": 12,
+    "question": "An application stores highly connected data such as relationships between customers, accounts, and transactions. Which database service is purpose-built for graph workloads?",
+    "options": [
+      "Amazon DynamoDB",
+      "Amazon RDS",
+      "Amazon Redshift",
+      "Amazon Neptune"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Amazon Neptune is a managed graph database service designed for highly connected datasets."
+  },
+  {
+    "id": 13,
+    "question": "A company requires an application to remain available if one Availability Zone becomes unavailable. Which architecture is most appropriate?",
+    "options": [
+      "Use S3 Standard-IA for application compute",
+      "Use only larger instances",
+      "Deploy all resources in one Availability Zone",
+      "Deploy redundant resources across multiple Availability Zones"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Multiple Availability Zones provide fault isolation within an AWS Region."
+  },
+  {
+    "id": 14,
+    "question": "A company wants to centrally manage identities for employees accessing multiple AWS accounts. Which AWS service is designed for this requirement?",
+    "options": [
+      "AWS IAM Identity Center",
+      "AWS Directory Service only",
+      "AWS Resource Access Manager",
+      "Amazon Cognito"
+    ],
+    "correctAnswer": "A",
+    "explanation": "IAM Identity Center centrally manages workforce identities and access across AWS accounts and applications."
+  },
+  {
+    "id": 15,
+    "question": "A company needs an application to continue operating if an entire AWS Region becomes unavailable. Which strategy provides the highest level of regional resilience?",
+    "options": [
+      "Multi-Region deployment",
+      "Multi-AZ deployment only",
+      "Larger EC2 instances in one Region",
+      "Single-region backup only"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Multi-Region architectures provide resilience against regional failures."
+  },
+  {
+    "id": 16,
+    "question": "A company wants to add generative AI capabilities to applications using foundation models through a managed AWS service. Which service is most appropriate?",
+    "options": [
+      "Amazon SageMaker AI only",
+      "Amazon Rekognition",
+      "Amazon Bedrock",
+      "Amazon Textract"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Amazon Bedrock provides managed access to foundation models and capabilities for building generative AI applications."
+  },
+  {
+    "id": 17,
+    "question": "A company needs to automate application deployment to EC2 instances. Which service is specifically designed for this?",
+    "options": [
+      "AWS CodeBuild",
+      "AWS CodePipeline only",
+      "AWS CodeArtifact",
+      "AWS CodeDeploy"
+    ],
+    "correctAnswer": "D",
+    "explanation": "CodeDeploy automates application deployments to supported compute targets including EC2."
+  },
+  {
+    "id": 18,
+    "question": "A company wants to automatically scale a web application based on CPU utilization while ensuring instances remain distributed across multiple Availability Zones. Which design is most resilient?",
+    "options": [
+      "One large EC2 instance with no scaling",
+      "Auto Scaling group spanning multiple Availability Zones",
+      "EC2 instance with an EBS volume only",
+      "One EC2 instance in one Availability Zone"
+    ],
+    "correctAnswer": "B",
+    "explanation": "A multi-AZ Auto Scaling group improves availability and automatically adjusts capacity."
+  },
+  {
+    "id": 19,
+    "question": "A system needs to deliver the same event to multiple independent consumers, such as billing, analytics, and notifications. Which architecture is best?",
+    "options": [
+      "Amazon EBS snapshot",
+      "Amazon SQS queue only",
+      "Amazon SNS topic with multiple subscriptions",
+      "Amazon Route 53 health check"
+    ],
+    "correctAnswer": "C",
+    "explanation": "SNS provides publish/subscribe fan-out so one message can be delivered to multiple subscribers."
+  },
+  {
+    "id": 20,
+    "question": "A company wants recommendations for reducing unused resources and improving cost efficiency. Which AWS capability is useful?",
+    "options": [
+      "Amazon Route 53",
+      "AWS Trusted Advisor",
+      "AWS Shield",
+      "AWS CloudTrail"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Trusted Advisor provides recommendations across cost optimization, security, performance, fault tolerance, and service limits."
+  },
+  {
+    "id": 21,
+    "question": "A development team wants infrastructure deployments to be repeatable and represented as code. Which AWS service is designed for this purpose?",
+    "options": [
+      "AWS Config",
+      "AWS Artifact",
+      "AWS CloudTrail",
+      "AWS CloudFormation"
+    ],
+    "correctAnswer": "D",
+    "explanation": "CloudFormation lets teams define AWS infrastructure declaratively as code and deploy it repeatedly."
+  },
+  {
+    "id": 22,
+    "question": "A company needs block storage attached to a single EC2 instance for a database workload. Which service is designed for this requirement?",
+    "options": [
+      "Amazon FSx",
+      "Amazon S3",
+      "Amazon EFS",
+      "Amazon EBS"
+    ],
+    "correctAnswer": "D",
+    "explanation": "EBS provides persistent block storage volumes designed primarily for EC2 workloads."
+  },
+  {
+    "id": 23,
+    "question": "A company needs to provision TLS certificates for AWS-integrated services without manually purchasing and importing certificates. Which service is most appropriate?",
+    "options": [
+      "AWS Artifact",
+      "AWS Secrets Manager",
+      "AWS KMS",
+      "AWS Certificate Manager"
+    ],
+    "correctAnswer": "D",
+    "explanation": "ACM provides and manages TLS/SSL certificates for supported AWS services."
+  },
+  {
+    "id": 24,
+    "question": "A company has a workload with unpredictable usage and wants to pay only for resources when they are running, without commitments. Which pricing model is most appropriate?",
+    "options": [
+      "Reserved Instances",
+      "Dedicated Hosts",
+      "Savings Plans",
+      "On-Demand"
+    ],
+    "correctAnswer": "D",
+    "explanation": "On-Demand pricing provides flexible usage without a long-term commitment."
+  },
+  {
+    "id": 25,
+    "question": "A company wants a consolidated AWS bill for multiple accounts under one organization. Which AWS Organizations feature supports this?",
+    "options": [
+      "AWS Config Aggregator",
+      "Consolidated billing",
+      "Security Hub",
+      "Resource Access Manager"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Consolidated billing combines charges for accounts in an AWS Organization into a single bill."
+  },
+  {
+    "id": 26,
+    "question": "A company needs dedicated physical servers because of licensing requirements tied to physical sockets or cores. Which EC2 option is appropriate?",
+    "options": [
+      "Savings Plans",
+      "Dedicated Hosts",
+      "Burstable instances",
+      "Spot Instances"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Dedicated Hosts provide visibility and control over physical server allocation and are useful for certain licensing requirements."
+  },
+  {
+    "id": 27,
+    "question": "A company needs to share a specific subnet or resource across AWS accounts without granting broad administrative access. Which service can facilitate controlled resource sharing?",
+    "options": [
+      "AWS Budgets",
+      "AWS Shield",
+      "AWS Resource Access Manager",
+      "AWS Organizations SCP only"
+    ],
+    "correctAnswer": "C",
+    "explanation": "AWS RAM allows supported resources to be shared across accounts or organizational structures."
+  },
+  {
+    "id": 28,
+    "question": "A developer must be prevented from granting themselves permissions beyond a defined maximum, even if another policy attempts to grant them more. Which IAM feature is appropriate?",
+    "options": [
+      "Permission boundary",
+      "SCP only",
+      "Resource tag",
+      "Security group"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Permission boundaries define the maximum permissions an IAM principal can receive."
+  },
+  {
+    "id": 29,
+    "question": "An application requires a managed relational database with automated backups, patching, and Multi-AZ deployment. Which service should be selected?",
+    "options": [
+      "Amazon RDS",
+      "Amazon S3",
+      "Amazon Neptune",
+      "Amazon DynamoDB"
+    ],
+    "correctAnswer": "A",
+    "explanation": "RDS provides managed relational databases with operational features such as backups, patching, and Multi-AZ options."
+  },
+  {
+    "id": 30,
+    "question": "A company wants to identify unused IAM permissions and reduce excessive privileges based on observed activity. Which capability can help?",
+    "options": [
+      "Amazon Inspector",
+      "IAM Access Analyzer",
+      "Amazon Macie",
+      "AWS Shield"
+    ],
+    "correctAnswer": "B",
+    "explanation": "IAM Access Analyzer helps identify external access and can assist with analyzing permissions and unused access."
+  },
+  {
+    "id": 31,
+    "question": "A workload runs continuously with stable resource requirements. The company wants predictable discounts based on a committed amount of compute usage rather than specific instance families. Which option is generally suitable?",
+    "options": [
+      "On-Demand only",
+      "Dedicated Hosts",
+      "Spot Instances",
+      "Compute Savings Plans"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Compute Savings Plans provide flexible discounts based on committed compute spend across eligible compute usage."
+  },
+  {
+    "id": 32,
+    "question": "Private EC2 instances need to access Amazon S3 without routing traffic through a NAT Gateway or public internet. Which solution is most appropriate?",
+    "options": [
+      "Public IPv4 address",
+      "NAT Gateway",
+      "S3 Gateway VPC endpoint",
+      "Internet Gateway"
+    ],
+    "correctAnswer": "C",
+    "explanation": "An S3 gateway endpoint provides private connectivity from a VPC to S3 without traversing the internet."
+  },
+  {
+    "id": 33,
+    "question": "A company wants a private repository for software packages and dependencies used by its development teams. Which service should be considered?",
+    "options": [
+      "AWS CodeArtifact",
+      "AWS CodeDeploy",
+      "AWS Artifact",
+      "Amazon S3 Glacier"
+    ],
+    "correctAnswer": "A",
+    "explanation": "CodeArtifact is a managed artifact repository for software packages and dependencies."
+  },
+  {
+    "id": 34,
+    "question": "A company wants to prevent accidental public access to all S3 buckets in an AWS account. Which feature provides account-level protection?",
+    "options": [
+      "S3 Intelligent-Tiering",
+      "S3 Block Public Access",
+      "S3 Object Lock only",
+      "S3 Transfer Acceleration"
+    ],
+    "correctAnswer": "B",
+    "explanation": "S3 Block Public Access provides controls that prevent or restrict public bucket and object access."
+  },
+  {
+    "id": 35,
+    "question": "A company wants to deploy applications using source code repositories, automated builds, tests, and deployment pipelines. Which AWS service combination is appropriate?",
+    "options": [
+      "CloudTrail with Config",
+      "CodePipeline with CodeBuild and CodeDeploy",
+      "Route 53 with CloudFront",
+      "Inspector with GuardDuty"
+    ],
+    "correctAnswer": "B",
+    "explanation": "CodePipeline orchestrates CI/CD workflows and can integrate CodeBuild and CodeDeploy."
+  },
+  {
+    "id": 36,
+    "question": "An application requires automatically adjusting EC2 capacity based on demand while maintaining a minimum number of instances. Which service combination is most appropriate?",
+    "options": [
+      "EC2 Auto Scaling with Elastic Load Balancing",
+      "S3 with CloudFront",
+      "Route 53 with CloudTrail",
+      "RDS with ElastiCache"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Auto Scaling adjusts capacity while ELB distributes traffic across healthy instances."
+  },
+  {
+    "id": 37,
+    "question": "A company needs centralized aggregation and prioritization of security findings from multiple AWS security services. Which service is most appropriate?",
+    "options": [
+      "AWS Firewall Manager only",
+      "AWS Security Hub",
+      "AWS WAF",
+      "Amazon Inspector"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Security Hub aggregates findings and provides a centralized view of security posture and standards."
+  },
+  {
+    "id": 38,
+    "question": "An application needs to retrieve a secret database password at runtime and rotate it automatically. Which AWS service is most appropriate?",
+    "options": [
+      "AWS Secrets Manager",
+      "Amazon S3",
+      "AWS Artifact",
+      "AWS Systems Manager Patch Manager"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Secrets Manager is designed to securely store, retrieve, and rotate secrets such as database credentials."
+  },
+  {
+    "id": 39,
+    "question": "A company wants to identify which AWS account or cost center is responsible for resources. Which mechanism is commonly used for cost allocation?",
+    "options": [
+      "Network ACLs",
+      "CloudTrail event selectors",
+      "Security groups",
+      "Cost allocation tags"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Cost allocation tags can organize and attribute AWS costs to applications, teams, or business units."
+  },
+  {
+    "id": 40,
+    "question": "A company needs to store encryption keys and control access to cryptographic operations. Which AWS service should be used?",
+    "options": [
+      "AWS Certificate Manager only",
+      "AWS Key Management Service",
+      "AWS Secrets Manager only",
+      "Amazon S3"
+    ],
+    "correctAnswer": "B",
+    "explanation": "AWS KMS creates and manages cryptographic keys and controls their use through policies and IAM."
+  },
+  {
+    "id": 41,
+    "question": "A company wants to monitor CPU utilization, application metrics, and logs from AWS resources. Which service should it use?",
+    "options": [
+      "AWS Config",
+      "Amazon CloudWatch",
+      "AWS CloudTrail",
+      "AWS Artifact"
+    ],
+    "correctAnswer": "B",
+    "explanation": "CloudWatch collects metrics, logs, and operational telemetry and supports alarms and dashboards."
+  },
+  {
+    "id": 42,
+    "question": "A company wants to run a non-critical workload at the lowest possible compute cost and can tolerate interruptions. Which option is best?",
+    "options": [
+      "On-Demand Instances",
+      "Reserved Instances only",
+      "Dedicated Hosts",
+      "Spot Instances"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Spot Instances can substantially reduce compute cost for interruptible workloads."
+  },
+  {
+    "id": 43,
+    "question": "A company wants to detect vulnerabilities in Amazon EC2 instances and container images with minimal manual effort. Which service is most appropriate?",
+    "options": [
+      "Amazon Inspector",
+      "AWS Artifact",
+      "AWS Shield Advanced",
+      "Amazon GuardDuty"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Amazon Inspector continuously scans supported workloads for software vulnerabilities and unintended network exposure."
+  },
+  {
+    "id": 44,
+    "question": "A company needs to ingest and transform streaming data before delivering it to destinations such as S3. Which managed service can simplify this?",
+    "options": [
+      "Amazon EBS",
+      "Amazon Data Firehose",
+      "AWS DMS only",
+      "AWS Snowball"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Amazon Data Firehose provides managed delivery of streaming data to supported destinations and can perform transformations."
+  },
+  {
+    "id": 45,
+    "question": "A workload on Amazon EC2 requires temporary access to Amazon S3 without storing long-term credentials on the instance. Which solution is most appropriate?",
+    "options": [
+      "Store credentials in an encrypted text file",
+      "Store an IAM access key in the instance user data",
+      "Use an IAM role attached to the EC2 instance",
+      "Create an IAM user specifically for the instance"
+    ],
+    "correctAnswer": "C",
+    "explanation": "IAM roles provide temporary credentials to AWS resources without embedding long-term access keys."
+  },
+  {
+    "id": 46,
+    "question": "A company wants to allow a user to access AWS resources only when MFA is present. Which IAM policy condition can enforce this?",
+    "options": [
+      "aws:RequestedRegion only",
+      "aws:MultiFactorAuthPresent",
+      "aws:PrincipalOrgID only",
+      "aws:SourceIp only"
+    ],
+    "correctAnswer": "B",
+    "explanation": "The aws:MultiFactorAuthPresent condition key can be used to require MFA for applicable requests."
+  },
+  {
+    "id": 47,
+    "question": "A company can tolerate hours of recovery time and wants the lowest-cost disaster recovery approach. Which strategy is generally most appropriate?",
+    "options": [
+      "Warm standby",
+      "Multi-site active-active",
+      "Backup and restore",
+      "Hot standby"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Backup and restore is generally the lowest-cost DR approach but has longer recovery times."
+  },
+  {
+    "id": 48,
+    "question": "A company needs to decouple order processing from customer-facing requests so that temporary downstream failures do not immediately affect users. Which service is most appropriate?",
+    "options": [
+      "Amazon EFS",
+      "Amazon SQS",
+      "Amazon Route 53",
+      "AWS CloudTrail"
+    ],
+    "correctAnswer": "B",
+    "explanation": "SQS provides durable queues that decouple producers and consumers and can absorb temporary processing failures."
+  },
+  {
+    "id": 49,
+    "question": "A company needs a managed private DNS service for resources inside a VPC. Which AWS service provides DNS capabilities?",
+    "options": [
+      "Amazon S3",
+      "AWS Direct Connect",
+      "Amazon Route 53 private hosted zones",
+      "Amazon CloudFront"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Route 53 private hosted zones provide DNS resolution within associated VPCs."
+  },
+  {
+    "id": 50,
+    "question": "A company needs to migrate an existing relational database to AWS with minimal downtime. Which service is specifically designed for this purpose?",
+    "options": [
+      "AWS Database Migration Service",
+      "AWS Backup",
+      "AWS Application Migration Service",
+      "AWS DataSync"
+    ],
+    "correctAnswer": "A",
+    "explanation": "AWS DMS supports database migration and replication while minimizing application downtime."
+  },
+  {
+    "id": 51,
+    "question": "An organization wants intelligent detection of suspicious activity across AWS accounts using signals such as CloudTrail, DNS, and network activity. Which service should be used?",
+    "options": [
+      "Amazon Macie",
+      "Amazon GuardDuty",
+      "AWS Security Hub only",
+      "AWS Config"
+    ],
+    "correctAnswer": "B",
+    "explanation": "GuardDuty analyzes multiple AWS data sources to identify potentially malicious or unauthorized activity."
+  },
+  {
+    "id": 52,
+    "question": "A company has limited network bandwidth and needs to migrate petabytes of data into AWS. Which approach is most appropriate?",
+    "options": [
+      "Amazon CloudFront",
+      "AWS DataSync over a slow internet link",
+      "Amazon Route 53",
+      "AWS Snowball Edge devices"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Snowball Edge provides physical data transfer for large datasets when network transfer is impractical."
+  },
+  {
+    "id": 53,
+    "question": "A company needs to distribute static website assets globally with low latency. Which architecture is most appropriate?",
+    "options": [
+      "Amazon EBS with NAT Gateway",
+      "Amazon S3 with Amazon CloudFront",
+      "Amazon RDS with Transit Gateway",
+      "Amazon EFS with AWS Direct Connect"
+    ],
+    "correctAnswer": "B",
+    "explanation": "S3 provides durable object storage and CloudFront caches content at edge locations close to users."
+  },
+  {
+    "id": 54,
+    "question": "A company must retain S3 objects in a tamper-resistant manner for regulatory purposes and prevent deletion during the retention period. Which feature is appropriate?",
+    "options": [
+      "S3 Transfer Acceleration",
+      "S3 Object Lock",
+      "S3 Intelligent-Tiering",
+      "S3 Lifecycle only"
+    ],
+    "correctAnswer": "B",
+    "explanation": "S3 Object Lock supports write-once-read-many retention and legal holds for protected objects."
+  },
+  {
+    "id": 55,
+    "question": "A company wants to estimate AWS costs before deploying a proposed architecture. Which tool is best suited?",
+    "options": [
+      "AWS Cost Explorer",
+      "AWS Pricing Calculator",
+      "AWS Budgets",
+      "AWS Trusted Advisor"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Pricing Calculator estimates costs for proposed AWS architectures before deployment."
+  },
+  {
+    "id": 56,
+    "question": "A company wants to enforce consistent firewall rules across multiple AWS accounts and VPCs. Which service can centrally manage AWS WAF and related firewall policies?",
+    "options": [
+      "AWS Config only",
+      "AWS Trusted Advisor",
+      "Amazon GuardDuty",
+      "AWS Firewall Manager"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Firewall Manager centrally manages firewall policies across accounts and resources in AWS Organizations."
+  },
+  {
+    "id": 57,
+    "question": "A company is designing a new AWS workload and wants to evaluate it across operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability. Which AWS framework should guide the review?",
+    "options": [
+      "AWS Service Catalog",
+      "AWS Well-Architected Framework",
+      "AWS Cloud Adoption Framework only",
+      "AWS Trusted Advisor only"
+    ],
+    "correctAnswer": "B",
+    "explanation": "The AWS Well-Architected Framework provides a structured approach for reviewing workloads across its six pillars."
+  },
+  {
+    "id": 58,
+    "question": "A company needs a managed service to automatically evaluate AWS architecture against cost optimization, security, performance, and fault-tolerance best practices. Which should be considered?",
+    "options": [
+      "Amazon Macie",
+      "AWS Trusted Advisor",
+      "AWS CloudFormation",
+      "Amazon Inspector"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Trusted Advisor provides automated checks and recommendations across several AWS best-practice categories."
+  },
+  {
+    "id": 59,
+    "question": "A serverless application needs event-driven processing when a new object is uploaded to Amazon S3. Which service can directly invoke a Lambda function based on the event?",
+    "options": [
+      "Amazon Route 53",
+      "AWS Shield",
+      "Amazon S3 event notifications",
+      "AWS Artifact"
+    ],
+    "correctAnswer": "C",
+    "explanation": "S3 can publish object events to services such as Lambda, SQS, and SNS."
+  },
+  {
+    "id": 60,
+    "question": "A company needs a managed service for building, training, and deploying machine learning models. Which service should it evaluate?",
+    "options": [
+      "Amazon Translate",
+      "Amazon SageMaker AI",
+      "Amazon Rekognition",
+      "Amazon Polly"
+    ],
+    "correctAnswer": "B",
+    "explanation": "SageMaker AI provides managed capabilities across the machine learning development lifecycle."
+  },
+  {
+    "id": 61,
+    "question": "A company wants to route users to different endpoints based on their geographic location. Which Route 53 routing policy is designed for this?",
+    "options": [
+      "Weighted routing",
+      "Latency-based routing",
+      "Geolocation routing",
+      "Simple routing"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Geolocation routing uses the geographic location of users to determine routing."
+  },
+  {
+    "id": 62,
+    "question": "A company needs centralized governance that prevents member accounts from using specific AWS services regardless of IAM permissions. Which AWS Organizations feature is designed for this?",
+    "options": [
+      "Resource policies only",
+      "Security groups",
+      "IAM permission boundaries",
+      "Service Control Policies"
+    ],
+    "correctAnswer": "D",
+    "explanation": "SCPs define maximum available permissions for accounts or organizational units and can restrict service usage."
+  },
+  {
+    "id": 63,
+    "question": "An application repeatedly reads the same database records and is experiencing high database load. Which service can reduce database read pressure by caching frequently accessed data?",
+    "options": [
+      "Amazon S3 Glacier",
+      "Amazon Inspector",
+      "Amazon ElastiCache",
+      "AWS DataSync"
+    ],
+    "correctAnswer": "C",
+    "explanation": "ElastiCache provides managed in-memory caching using engines such as Redis OSS and Memcached."
+  },
+  {
+    "id": 64,
+    "question": "A company wants a managed service to compile source code and run automated unit tests as part of a CI process. Which service should be used?",
+    "options": [
+      "AWS CodeBuild",
+      "AWS CodePipeline",
+      "AWS CloudFormation",
+      "AWS CodeDeploy"
+    ],
+    "correctAnswer": "A",
+    "explanation": "CodeBuild is a managed build service that compiles code and runs tests."
+  },
+  {
+    "id": 65,
+    "question": "A company needs a dedicated private network connection between its data center and AWS. Which service should it use?",
+    "options": [
+      "AWS Site-to-Site VPN only",
+      "Amazon CloudFront",
+      "AWS Direct Connect",
+      "NAT Gateway"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Direct Connect provides a dedicated network connection from an on-premises environment to AWS."
+  },
+  {
+    "id": 66,
+    "question": "A global application requires a static anycast IP entry point and routing across AWS global infrastructure to healthy application endpoints. Which service is designed for this?",
+    "options": [
+      "AWS Direct Connect",
+      "Amazon CloudFront only",
+      "Amazon Route 53 Resolver",
+      "AWS Global Accelerator"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Global Accelerator provides static anycast IP addresses and routes traffic over the AWS global network."
+  },
+  {
+    "id": 67,
+    "question": "An application needs to process a continuous stream of clickstream events in near real time. Which AWS service is designed for real-time data streaming?",
+    "options": [
+      "Amazon S3 Glacier",
+      "Amazon EBS",
+      "Amazon Kinesis Data Streams",
+      "AWS Backup"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Kinesis Data Streams is designed to collect and process real-time streaming data."
+  },
+  {
+    "id": 68,
+    "question": "A company wants to provide temporary access to an S3 object without making the object publicly accessible. Which mechanism should it use?",
+    "options": [
+      "Internet Gateway",
+      "S3 pre-signed URL",
+      "Public bucket policy",
+      "S3 static website endpoint"
+    ],
+    "correctAnswer": "B",
+    "explanation": "A pre-signed URL grants time-limited access to a specific S3 object using the permissions of the signer."
+  },
+  {
+    "id": 69,
+    "question": "A fault-tolerant batch workload can be interrupted and restarted. Which EC2 purchasing model can provide the largest potential discount?",
+    "options": [
+      "Reserved Instances",
+      "Dedicated Hosts",
+      "Spot Instances",
+      "On-Demand Instances"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Spot Instances use spare AWS capacity and can offer substantial discounts, but they can be interrupted."
+  },
+  {
+    "id": 70,
+    "question": "A company needs DNS routing that directs users to the AWS Region with the lowest network latency. Which Route 53 routing policy should be used?",
+    "options": [
+      "Latency-based routing",
+      "Weighted routing",
+      "Failover routing",
+      "Simple routing"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Latency-based routing directs users to the Region that provides the lowest measured latency."
+  },
+  {
+    "id": 71,
+    "question": "A company needs to centrally collect logs from multiple AWS accounts and Regions for analysis. Which approach is appropriate?",
+    "options": [
+      "Amazon EBS snapshots only",
+      "Centralized CloudWatch Logs architecture",
+      "S3 static website hosting",
+      "Route 53 health checks"
+    ],
+    "correctAnswer": "B",
+    "explanation": "CloudWatch Logs can centralize and analyze application and service logs when configured across accounts and Regions."
+  },
+  {
+    "id": 72,
+    "question": "A company needs a disaster recovery strategy that minimizes recovery time while avoiding the cost of running a full production environment in another Region. Which approach is generally a balance between cost and recovery speed?",
+    "options": [
+      "Backup and restore",
+      "Warm standby",
+      "Multi-site active-active",
+      "Pilot light"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Warm standby maintains a scaled-down but functional environment, offering faster recovery than backup/restore at lower cost than active-active."
+  },
+  {
+    "id": 73,
+    "question": "A finance team wants to analyze historical AWS spending and identify cost trends by service. Which tool should be used?",
+    "options": [
+      "AWS Cost Explorer",
+      "AWS CloudTrail",
+      "AWS Artifact",
+      "AWS Pricing Calculator"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Cost Explorer provides interactive analysis of historical and current AWS costs and usage."
+  },
+  {
+    "id": 74,
+    "question": "A globally distributed application needs a serverless NoSQL database with single-digit millisecond performance and automatic scaling. Which service is most appropriate?",
+    "options": [
+      "Amazon DynamoDB",
+      "Amazon Redshift",
+      "Amazon Aurora",
+      "Amazon RDS"
+    ],
+    "correctAnswer": "A",
+    "explanation": "DynamoDB is a serverless NoSQL database designed for low-latency performance and automatic scaling."
+  },
+  {
+    "id": 75,
+    "question": "A company wants private connectivity from a VPC to a supported AWS service while keeping traffic off the public internet. Which option is appropriate?",
+    "options": [
+      "Public subnet only",
+      "Internet Gateway",
+      "VPC endpoint",
+      "NAT Gateway only"
+    ],
+    "correctAnswer": "C",
+    "explanation": "VPC endpoints provide private connectivity to supported AWS services without requiring public internet access."
+  },
+  {
+    "id": 76,
+    "question": "A company wants centralized policy-based backup management across supported AWS resources and multiple accounts. Which service is best suited?",
+    "options": [
+      "AWS CloudTrail",
+      "AWS Config",
+      "Amazon S3 Lifecycle",
+      "AWS Backup"
+    ],
+    "correctAnswer": "D",
+    "explanation": "AWS Backup centrally manages and automates backups across supported AWS services and accounts."
+  },
+  {
+    "id": 77,
+    "question": "A company wants to automatically detect configuration changes to AWS resources and maintain a historical record of configurations. Which service should it use?",
+    "options": [
+      "AWS Pricing Calculator",
+      "AWS Shield",
+      "AWS Config",
+      "Amazon CloudWatch only"
+    ],
+    "correctAnswer": "C",
+    "explanation": "AWS Config records resource configurations and tracks changes over time."
+  },
+  {
+    "id": 78,
+    "question": "A containerized application requires orchestration but the company does not want to manage Kubernetes control planes. Which AWS service provides managed Kubernetes?",
+    "options": [
+      "AWS Batch",
+      "AWS Lambda",
+      "Amazon ECS",
+      "Amazon EKS"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Amazon EKS is AWS's managed Kubernetes service."
+  },
+  {
+    "id": 79,
+    "question": "A web application must allow outbound internet access from private subnets while preventing unsolicited inbound internet connections. Which architecture is appropriate?",
+    "options": [
+      "Route 53 Resolver only",
+      "NAT Gateway in a public subnet with private subnet routes pointing to it",
+      "Internet Gateway directly attached to private instances",
+      "Public IPs on all private instances"
+    ],
+    "correctAnswer": "B",
+    "explanation": "A NAT Gateway allows outbound internet access for private resources while preventing unsolicited inbound connections."
+  },
+  {
+    "id": 80,
+    "question": "Multiple VPCs across many AWS accounts need centralized connectivity without creating a full mesh of individual VPC peering connections. Which service should be evaluated?",
+    "options": [
+      "Internet Gateway",
+      "NAT Gateway",
+      "AWS Transit Gateway",
+      "VPC Endpoint"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Transit Gateway acts as a central network hub for connecting multiple VPCs and on-premises networks."
+  },
+  {
+    "id": 81,
+    "question": "A company wants to run containers without managing servers or EC2 instances. Which compute option is most appropriate?",
+    "options": [
+      "AWS Outposts only",
+      "Amazon ECS with AWS Fargate",
+      "Amazon EC2 Auto Scaling",
+      "Amazon ECS on EC2 only"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Fargate provides serverless compute for containers, removing the need to manage underlying EC2 instances."
+  },
+  {
+    "id": 82,
+    "question": "A company needs a hybrid storage solution that allows on-premises applications to access cloud-backed storage through standard protocols. Which service is most appropriate?",
+    "options": [
+      "AWS Storage Gateway",
+      "Amazon CloudFront",
+      "AWS Snowcone",
+      "AWS DataSync only"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Storage Gateway provides hybrid storage capabilities connecting on-premises environments with AWS storage services."
+  },
+  {
+    "id": 83,
+    "question": "A company wants to ensure that newly created resources receive mandatory tags or comply with organizational policies. Which combination is most appropriate for governance?",
+    "options": [
+      "Amazon CloudFront and Route 53",
+      "AWS Shield Standard",
+      "Amazon S3 lifecycle policies only",
+      "AWS Organizations with SCPs and AWS Config rules"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Organizations provides account-level governance while Config can evaluate resource configurations and compliance."
+  },
+  {
+    "id": 84,
+    "question": "A company wants an application running in one AWS account to access a resource in another account without sharing long-term IAM user credentials. Which mechanism is commonly used?",
+    "options": [
+      "Store an access key in S3",
+      "Create a shared root account password",
+      "IAM role assumption using AWS STS",
+      "Use a public resource policy for all users"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Cross-account IAM role assumption through AWS STS provides temporary credentials and avoids long-term credential sharing."
+  },
+  {
+    "id": 85,
+    "question": "A company wants traffic to go to a secondary endpoint only when the primary endpoint becomes unhealthy. Which Route 53 routing policy should be used?",
+    "options": [
+      "Failover routing",
+      "Weighted routing",
+      "Latency-based routing",
+      "Multivalue answer routing"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Failover routing uses health checks to direct traffic between primary and secondary endpoints."
+  },
+  {
+    "id": 86,
+    "question": "A company runs a three-tier application on Amazon EC2. The database tier must remain private, while the web tier must accept HTTPS traffic from the internet. Which architecture provides the most appropriate network isolation?",
+    "options": [
+      "Place all instances in a private subnet and expose the database through an internet gateway",
+      "Place database servers in a public subnet and protect them with network ACLs",
+      "Place web servers in a public subnet and database servers in a private subnet",
+      "Place all instances in a public subnet and restrict security groups"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Public-facing web resources belong in public subnets; private database resources should be isolated in private subnets."
+  },
+  {
+    "id": 87,
+    "question": "A company wants to run code without provisioning or managing servers and pay based on execution. Which service should be used?",
+    "options": [
+      "AWS Lambda",
+      "Amazon EC2",
+      "Amazon ECS on EC2",
+      "Amazon RDS"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Lambda is a serverless compute service where AWS manages the underlying infrastructure and billing is usage based."
+  },
+  {
+    "id": 88,
+    "question": "A company needs to automatically transition infrequently accessed S3 objects to lower-cost storage based on changing access patterns. Which S3 storage class is most appropriate?",
+    "options": [
+      "S3 One Zone-IA",
+      "S3 Glacier Deep Archive only",
+      "S3 Intelligent-Tiering",
+      "S3 Standard"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Intelligent-Tiering automatically moves objects between access tiers based on access patterns."
+  },
+  {
+    "id": 89,
+    "question": "A company needs to encrypt objects stored in Amazon S3 and maintain control over the encryption keys. Which option provides the greatest control?",
+    "options": [
+      "S3 Transfer Acceleration",
+      "SSE-KMS with an AWS KMS customer managed key",
+      "S3 Intelligent-Tiering",
+      "SSE-S3"
+    ],
+    "correctAnswer": "B",
+    "explanation": "SSE-KMS with a customer managed key provides granular key policies, permissions, auditing, and key lifecycle control."
+  },
+  {
+    "id": 90,
+    "question": "A network team needs stateless filtering at the subnet boundary, including explicit deny rules. Which VPC feature should be used?",
+    "options": [
+      "Security groups",
+      "Network ACLs",
+      "Route tables",
+      "IAM policies"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Network ACLs are stateless subnet-level controls and support explicit allow and deny rules."
+  },
+  {
+    "id": 91,
+    "question": "A company wants to trigger an automated action when an Amazon CloudWatch metric crosses a threshold. Which CloudWatch feature should be used?",
+    "options": [
+      "CloudTrail trail",
+      "CloudWatch Alarm",
+      "CloudWatch Dashboard only",
+      "CloudWatch Logs Insights only"
+    ],
+    "correctAnswer": "B",
+    "explanation": "CloudWatch alarms evaluate metrics against thresholds and can initiate actions or notifications."
+  },
+  {
+    "id": 92,
+    "question": "A company wants DDoS protection for a business-critical application with enhanced visibility and response support. Which service is most appropriate?",
+    "options": [
+      "Amazon GuardDuty",
+      "AWS Shield Advanced",
+      "AWS WAF only",
+      "AWS Shield Standard"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Shield Advanced provides enhanced DDoS protection, visibility, and additional support capabilities."
+  },
+  {
+    "id": 93,
+    "question": "A company needs to transfer hundreds of terabytes from an on-premises file system to Amazon S3 over an existing network connection while preserving metadata. Which service is designed for this?",
+    "options": [
+      "AWS Backup",
+      "AWS DataSync",
+      "AWS Snowball Edge only",
+      "Amazon CloudFront"
+    ],
+    "correctAnswer": "B",
+    "explanation": "DataSync accelerates online data transfers between on-premises storage and AWS services."
+  },
+  {
+    "id": 94,
+    "question": "A company wants an encrypted connection between its on-premises network and AWS over the public internet. Which service is most appropriate?",
+    "options": [
+      "AWS Direct Connect only",
+      "AWS Site-to-Site VPN",
+      "AWS PrivateLink",
+      "Amazon CloudFront"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Site-to-Site VPN creates encrypted tunnels between on-premises networks and AWS over the internet."
+  },
+  {
+    "id": 95,
+    "question": "A company wants to continuously evaluate whether AWS resources comply with predefined configuration rules. Which service is best suited?",
+    "options": [
+      "AWS CloudTrail",
+      "AWS Config",
+      "AWS Shield",
+      "Amazon Inspector"
+    ],
+    "correctAnswer": "B",
+    "explanation": "AWS Config evaluates resource configurations against compliance rules and maintains configuration history."
+  },
+  {
+    "id": 96,
+    "question": "A company wants to discover sensitive data such as personally identifiable information stored in Amazon S3. Which service is specifically designed for this?",
+    "options": [
+      "AWS Config",
+      "Amazon GuardDuty",
+      "Amazon Inspector",
+      "Amazon Macie"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Macie uses machine learning and pattern matching to discover and classify sensitive data in S3."
+  },
+  {
+    "id": 97,
+    "question": "A company needs near-zero recovery time and can afford to operate production workloads simultaneously in multiple Regions. Which DR strategy is most appropriate?",
+    "options": [
+      "Warm standby",
+      "Multi-site active-active",
+      "Pilot light",
+      "Backup and restore"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Active-active multi-site architecture can provide very low recovery time because multiple environments actively serve traffic."
+  },
+  {
+    "id": 98,
+    "question": "A workload requires an object store for billions of unstructured files with very high durability. Which service should be selected?",
+    "options": [
+      "Amazon EBS",
+      "Amazon RDS",
+      "Amazon S3",
+      "Amazon EFS"
+    ],
+    "correctAnswer": "C",
+    "explanation": "S3 is AWS's scalable object storage service and is designed for extremely high durability."
+  },
+  {
+    "id": 99,
+    "question": "A public web application is experiencing SQL injection attempts. Which AWS service can inspect HTTP requests and block matching malicious patterns?",
+    "options": [
+      "AWS WAF",
+      "Amazon Inspector",
+      "Amazon GuardDuty",
+      "AWS Shield Standard"
+    ],
+    "correctAnswer": "A",
+    "explanation": "AWS WAF evaluates web requests using rules that can block SQL injection, XSS, and other application-layer attacks."
+  },
+  {
+    "id": 100,
+    "question": "A security team needs stateful packet filtering for EC2 instances. Which VPC feature provides this?",
+    "options": [
+      "Internet gateways",
+      "Network ACLs",
+      "Security groups",
+      "Route tables"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Security groups are stateful virtual firewalls associated with network interfaces."
+  }
+]
