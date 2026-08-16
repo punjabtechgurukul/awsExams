@@ -1,20 +1,86 @@
-# AWS CLF-C02 iPad Mock Exam
+# AWS CLF-C02 iPad Mock Exam — Editable Question Bank
 
-This package contains the iPad-friendly AWS Cloud Practitioner mock exam.
+## Main improvement
 
-Features:
-- 83 questions
-- Touch-friendly interface
+You can now add as many questions as you want **without editing `index.html`**.
+
+The entire question bank is stored in:
+
+`questions.json`
+
+The app automatically reads the number of questions in that file.
+
+## Add a question
+
+Open `questions.json` and add another object before the closing `]`.
+
+Example:
+
+```json
+{
+  "q": "Which AWS service provides object storage?",
+  "o": [
+    "Amazon S3",
+    "Amazon EBS",
+    "Amazon EFS",
+    "Amazon RDS"
+  ],
+  "a": 0,
+  "e": "Amazon S3 is an object storage service. EBS is block storage, EFS is file storage, and RDS is a relational database service.",
+  "domain": "Technology",
+  "details": [
+    {"letter":"A","text":"Object storage service.","correct":true},
+    {"letter":"B","text":"Block storage primarily used with EC2.","correct":false},
+    {"letter":"C","text":"Managed elastic file storage.","correct":false},
+    {"letter":"D","text":"Managed relational database service.","correct":false}
+  ]
+}
+```
+
+### Correct answer value
+
+`a` uses zero-based numbering:
+
+- `0` = A
+- `1` = B
+- `2` = C
+- `3` = D
+
+Always use exactly four options.
+
+`details` controls the quick option review displayed after answering.
+
+## Adding multiple questions
+
+```json
+[
+  { ... existing question ... },
+  { ... new question ... },
+  { ... another new question ... }
+]
+```
+
+Remember to put a comma between question objects.
+
+## After adding questions
+
+1. Save `questions.json`.
+2. Upload/commit the updated file to your hosting service.
+3. Refresh the app on iPad.
+4. The new question count is picked up automatically.
+
+If using GitHub Pages, simply commit the changed `questions.json` file. You do not need to change the HTML.
+
+## Features
+
+- 83 questions currently included
+- Add unlimited additional questions
+- iPad/Safari touch-friendly
 - Instant correct/incorrect feedback
 - Correct answer and explanation
-- Quick descriptions of all options
-- Running score and progress
-- Add to Home Screen support when hosted over HTTPS
-
-## iPad setup
-1. Upload these files to an HTTPS static host such as GitHub Pages, Netlify, or Vercel.
-2. Open the resulting URL in Safari on iPad.
-3. Tap Share -> Add to Home Screen.
-4. Launch the exam from the new Home Screen icon.
-
-The app is client-side only and does not require a database.
+- Quick description of every option
+- Running score
+- Progress tracking
+- Local progress saving
+- PWA / Add to Home Screen support
+- Offline cache after initial load
