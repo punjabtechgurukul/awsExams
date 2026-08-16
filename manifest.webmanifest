@@ -1,0 +1,9 @@
+{
+  "name": "AWS CLF-C02 Mock Exam",
+  "short_name": "AWS CLF-C02",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f5f7",
+  "theme_color": "#17365d",
+  "description": "AWS Cloud Practitioner CLF-C02 instant-feedback mock exam"
+}
