@@ -1,6 +1,6 @@
 [
   {
-    "q": "A company runs a web application on Amazon EC2. Traffic varies significantly during the day, and the company wants the application to automatically add or remove EC2 capacity while maintaining the desired number of healthy instances. Which solution best meets the requirement?",
+    "q": "A Company runs a web application on Amazon EC2. Traffic varies significantly during the day, and the company wants the application to automatically add or remove EC2 capacity while maintaining the desired number of healthy instances. Which solution best meets the requirement?",
     "o": [
       "Use Amazon CloudFront to add and remove EC2 instances.",
       "Use an Auto Scaling group with a scaling policy.",
